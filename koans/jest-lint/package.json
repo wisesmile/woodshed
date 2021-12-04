@@ -1,0 +1,16 @@
+{
+  "name": "jest-lint",
+  "version": "1.0.0",
+  "description": "test of jest and lint",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "paz",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^8.4.0",
+    "eslint-plugin-jest": "^25.3.0",
+    "jest": "^27.4.3"
+  }
+}
