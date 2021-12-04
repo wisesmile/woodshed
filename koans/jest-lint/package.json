@@ -1,16 +1,35 @@
 {
-  "name": "jest-lint",
+  "name": "lab-javascript-koans",
   "version": "1.0.0",
-  "description": "test of jest and lint",
-  "main": "index.js",
+  "license": "UNLICENSED",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "test:watch": "jest --watchAll  --verbose=false"
   },
-  "author": "paz",
-  "license": "ISC",
   "devDependencies": {
     "eslint": "^8.4.0",
     "eslint-plugin-jest": "^25.3.0",
-    "jest": "^27.4.3"
+    "jest": "^27.4.3",
+    "jest-html-reporter": "^3.3.0",
+    "jest-junit": "^12.0.0"
+  },
+  "jest": {
+    "reporters": [
+      "default",
+      [
+        "./node_modules/jest-html-reporter",
+        {
+          "pageTitle": "Lab Solution",
+          "outputPath": "lab-solution.html",
+          "includeFailureMsg": true,
+          "includeConsoleLog": true
+        }
+      ]
+    ]
+  },
+  "jest-junit": {
+    "suiteNameTemplate": "{filepath}",
+    "classNameTemplate": "{classname}",
+    "titleTemplate": "{title}"
   }
 }
