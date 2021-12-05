@@ -1,4 +1,4 @@
-import { PalindromeChecker } from './index';
+import { PalindromeChecker } from './palindrome';
 
 describe('palindrome checker', () => {
   let palindromeChecker: PalindromeChecker;
@@ -28,5 +28,9 @@ describe('palindrome checker', () => {
 
   it('should be able to tell that "Was it a rat" is a palindrome', () => {
     expect(palindromeChecker.isAPalindrome('was it a rat i saw')).toBeTruthy();
+  });
+
+  it('should be able to tell that "almostomla" isnt a palindrome', () => {
+    expect(palindromeChecker.isAPalindrome('almostomla')).toBeFalsy();
   });
 });
